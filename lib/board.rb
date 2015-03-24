@@ -1,29 +1,15 @@
 class Board
-  
-  def place(position)
-    
-
-    # {:ship => location}
-    # # board = {}
-    # board[location] = ship
-    # board[:ship] = location
-    # board.select {|ship, location| p :ship => location}
-  end
-  
-  def position
+  attr_reader :grid
+  def initialize
+    @grid = [false]
   end
 
-  def fire(position)
+  def place location
+    @grid[0] = [true]
   end
 
-  def empty?
+  def status?
     true
   end
 
-
 end
-
-
-# board = Board.new
-# board.place('ship1', 'a2')
-# board.place('ship2', 'a4')
